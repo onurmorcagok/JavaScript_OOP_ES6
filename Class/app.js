@@ -23,6 +23,7 @@
 class Employee { // Class Created
 
     constructor(name, age, salary) { // Constructor Created
+        
         this.name = name;
         this.age = age;
         this.salary = salary;
