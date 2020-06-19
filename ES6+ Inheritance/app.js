@@ -1,21 +1,27 @@
-class Animal {
+class Person {
+    constructor(name, age) {
 
-    constructor(name) {
         this.name = name;
+        this.age = age;
     }
 
-    speak() {
-        console.log(this.name + ' makes a noise.');
-    }
-}
-
-class Dog extends Animal {
-
-    speak() {
-        console.log(this.name + " bark.");
+    showInfos() {
+        console.log("Name: " + this.name + " Age: " + this.age);
     }
 }
 
-const dog = new Animal ("Karabaş");
+class Employee extends Person {
 
-dog.speak();
+    constructor(name, age, salary) {
+
+        super(name, age);
+        this.salary = salary;
+    }
+
+    showInfos() {
+        console.log("Name : " + this.name + " Age: " + this.age + " Salary: " + this.age);
+    }
+}
+
+const emp = new Person("Onur M.", 23, 5000);
+console.log(emp);
