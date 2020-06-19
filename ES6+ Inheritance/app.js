@@ -18,10 +18,25 @@ class Employee extends Person {
         this.salary = salary;
     }
 
-    showInfos() {
+    showInfos() { //Overriding
         console.log("Name : " + this.name + " Age: " + this.age + " Salary: " + this.age);
+    }
+
+    toString() {
+        console.log("toString method called");
+    }
+
+    raiseSalary(amount){ //Extra Method
+        this.salary += amount;
     }
 }
 
-const emp = new Person("Onur M.", 23, 5000);
-console.log(emp);
+const emp = new Employee("Onur M.", 23, 5000);
+
+// console.log(emp);
+// console.log(toString);
+
+// emp.showInfos();
+// emp.toString();
+
+emp.raiseSalary(5000);
