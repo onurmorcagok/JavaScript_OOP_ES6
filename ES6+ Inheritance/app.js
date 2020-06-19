@@ -5,7 +5,7 @@ class Animal {
     }
 
     speak() {
-        console.log(this.name + " bark.");
+        console.log(this.name + ' makes a noise.');
     }
 }
 
@@ -16,6 +16,6 @@ class Dog extends Animal {
     }
 }
 
-const dog = new Dog ("Karabaş");
+const dog = new Animal ("Karabaş");
 
-console.log(dog);
+dog.speak();
