@@ -35,7 +35,7 @@ class BMW extends Car { // SubClass
 
 }
 
-class Mercedes extends Car {
+class Mercedes extends Car { // SubClass
 
     constructor(model, color, kilometer, engine, state, sunroof, conditioning, gear) {
 
@@ -55,7 +55,7 @@ class Mercedes extends Car {
     }
 }
 
-class Volkswagen extends Car {
+class Volkswagen extends Car { // SubClass
 
     constructor(model,color,kilometer,engine,state,sunroof,conditioning,gear) {
 
