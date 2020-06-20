@@ -12,6 +12,10 @@ class Car { // SuperClass
     carInfos() {
         console.log("Model:" + this.model + " Color:" + this.color + " Kilometer:" + this.kilometer + " Engine:" + this.engine + " State:" + this.state);
     }
+
+    carIsRunning () {
+        console.log("Car is ready and running.");
+    }
 }
 
 class BMW extends Car { // SubClass
@@ -49,10 +53,6 @@ class Mercedes extends Car { // SubClass
     carInfos() { // Overriding Method
         console.log("Model:" + this.model + " Color:" + this.color + " Kilometer:" + this.kilometer + " Engine:" + this.engine + " State:" + this.state + " Sunroof:" + this.sunroof + " Conditioning:" + this.conditioning + " Gear:" + this.gear);
     }
-
-    carIsRunning () {
-        console.log("Car is ready and running.");
-    }
 }
 
 class Volkswagen extends Car { // SubClass
@@ -86,6 +86,8 @@ const car2 = new Mercedes(1996, "White", "160.000", "1.6", "Second Handle", "No"
 
 const car3 = new Volkswagen(2008, "Gray", 75, "1.4", "Second Handle", "Yes", "Yes", "Automatic");
 
-car3.updateKilometer(25);
+// car3.updateKilometer(25); ---> Kilometer Updated.
 
 car3.carInfos();
+
+car3.carIsRunning(); // SuperClass Inheritance Method using.
