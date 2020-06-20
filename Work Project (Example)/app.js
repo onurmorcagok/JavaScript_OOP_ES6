@@ -1,4 +1,4 @@
-class Car {
+class Car { // SuperClass
 
     constructor(model, color, kilometer, engine, state) {
 
@@ -14,23 +14,59 @@ class Car {
     }
 }
 
-class BMW extends Car {
+class BMW extends Car { // SubClass
 
     constructor(model, color, kilometer, engine, state, sunroof, conditioning, gear) {
 
         super(model, color, kilometer, engine, state);
-        
+
         this.sunroof = sunroof;
         this.conditioning = conditioning;
         this.gear = gear;
     }
 
-    carInfos() {
-        console.log("Model:" + this.model + " Color:" + this.color + " Kilometer:" + this.kilometer + " Engine:" + this.engine + " State:" + this.state);
+    carInfos() { // Overriding Method
+        console.log("Model:" + this.model + " Color:" + this.color + " Kilometer:" + this.kilometer + " Engine:" + this.engine + " State:" + this.state + " Sunroof:" + this.sunroof + " Conditioning:" + this.conditioning + " Gear:" + this.gear);
+    }
+
+    toString() {
+        console.log("toString method called..");
     }
 
 }
 
-const car = new BMW (2020, "Black", "225.000", "2.0", "Zero Kilometer");
+class Mercedes extends Car {
 
-console.log(car);
+    constructor(model, color, kilometer, engine, state, sunroof, conditioning, gear) {
+
+        super(model, color, kilometer, engine, state);
+
+        this.sunroof = sunroof;
+        this.conditioning = conditioning;
+        this.gear = gear;
+    }
+
+    carInfos() { // Overriding Method
+        console.log("Model:" + this.model + " Color:" + this.color + " Kilometer:" + this.kilometer + " Engine:" + this.engine + " State:" + this.state + " Sunroof:" + this.sunroof + " Conditioning:" + this.conditioning + " Gear:" + this.gear);
+    }
+
+    carIsRunning () {
+        console.log("Car is ready and running.");
+    }
+}
+
+class Volkswagen extends Car {
+
+    constructor(model,color,kilometer,engine,state,sunroof,conditioning,gear) {
+        
+    }
+}
+
+const car1 = new BMW(2020, "Black", "225.000", "2.0", "Zero Kilometer", "Yes", "Yes", "Automatic");
+
+// car1.carInfos();
+
+const car2 = new Mercedes(1996, "White", "160.000", "1.6", "Second Handle", "No", "Yes", "Manuel");
+
+// car2.carInfos();
+// car2.carIsRunning();
