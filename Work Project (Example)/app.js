@@ -86,7 +86,7 @@ const car2 = new Mercedes(1996, "White", "160.000", "1.6", "Second Handle", "No"
 
 const car3 = new Volkswagen(2008, "Gray", 75, "1.4", "Second Handle", "Yes", "Yes", "Automatic");
 
-// car3.updateKilometer(25); ---> Kilometer Updated.
+car3.updateKilometer(25); // ---> Kilometer Updated.
 
 car3.carInfos();
 
